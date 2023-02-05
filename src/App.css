@@ -1,0 +1,16 @@
+.blink {
+  color:white;
+  animation: blink 0.7s ease infinite;
+}
+
+@keyframes blink {
+  10% {
+    color:white;
+  }
+  60% {
+    color:red;
+  }
+  100% {
+    color:white;
+  }
+}
