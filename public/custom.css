@@ -48,7 +48,3 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
-input::placeholder {
-  color: white !important;
-}

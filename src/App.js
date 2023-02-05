@@ -1,14 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import VintageGameApp from './components/home';
+import Home from './components/home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <VintageGameApp />
+    <>
+      <header className="mb-auto">
+        <div>
+          <h3 className="float-md-center mb-0 mt-3">Hanging Game</h3>
+        </div>
       </header>
-    </div>
+      <Home />
+    </>
   );
 }
 
