@@ -17,7 +17,7 @@ const Errors = ({ showStage, historic, isError, message }) => {
       {showStage && (
         <>
           <p className={"lead mb-0 " + isError}>
-           {wrongLetters.length} of 8 errors
+           {wrongLetters().length} of 8 errors
           </p>
           <p className="lead text-muted">({historic}...)</p>
         </>
