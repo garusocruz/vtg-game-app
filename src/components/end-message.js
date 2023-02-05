@@ -9,7 +9,7 @@ const EndMessage = ({ message }) => {
     <div>
       <h1 className="mb-5">{message}</h1>
       <button
-        className="p-4 btn btn-lg btn-light fw-bold border-white bg-white"
+        className="p-4 btn btn-lg btn-primary fw-bold"
         onClick={handleClick}
       >
         New game

@@ -64,36 +64,38 @@ const Stage = ({ message, setSessionId, sessionId, setMessage }) => {
 
   return (
     <div>
-      <h1 className="mb-5">{message}</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group d-flex flex-column mb-5">
-          <input
-            className={
-              "h1 text-uppercase form-control border-0 form-control-lg mb-3 mx-auto text-center bg" +
-              isElementActive(isValueEmpty) + isDisabled}
-            type="text"
-            value={inputValue}
-            onChange={(event) => onChangeHandler(event.target.value)}
-            style={{ width: "160px", height: "160px", fontSize: "60px" }}
-            placeholder={placeholder}
-            title="Type a letter"
-          />
-          <button
-            className={
-              "btn btn-lg fw-bold border-0 py-3 mx-auto btn" + isElementActive(!isValueEmpty) +
-              noValue}
-            type="submit"
-            disabled={isLoading || isValueEmpty}
-            title="Try"
-          >
-            Guess a letter
-          </button>
-        </div>
+      <div className="card mb-5 pt-5" style={{"--bs-card-bg": "#282c31"}}>
+        <h1 className="mb-5">{message}</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group d-flex flex-column mb-5">
+            <input
+              className={
+                "h1 text-uppercase form-control border-0 form-control-lg mb-3 mx-auto text-center bg" +
+                isElementActive(isValueEmpty) + isDisabled}
+              type="text"
+              value={inputValue}
+              onChange={(event) => onChangeHandler(event.target.value)}
+              style={{ width: "160px", height: "160px", fontSize: "60px" }}
+              placeholder={placeholder}
+              title="Type a letter"
+            />
+            <button
+              className={
+                "btn btn-lg fw-bold border-0 py-3 mx-auto btn" + isElementActive(!isValueEmpty) +
+                noValue}
+              type="submit"
+              disabled={isLoading || isValueEmpty}
+              title="Try"
+            >
+              Guess a letter
+            </button>
+          </div>
+        </form>
+      </div>
         <p className="lead mb-0">
-          Tried {onlyLetters(historic).length} of {8 - onlyLetters(historic).length} letters
+          Tried {onlyLetters(historic).length} of 8 letters
         </p>
         <p className="lead text-muted">({historic}...)</p>
-      </form>
     </div>
   );
 };
