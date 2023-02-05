@@ -76,6 +76,7 @@ const Stage = ({ message, setSessionId, sessionId, setMessage }) => {
             onChange={(event) => onChangeHandler(event.target.value)}
             style={{ width: "160px", height: "160px", fontSize: "60px" }}
             placeholder={placeholder}
+            title="Type a letter"
           />
           <button
             className={
@@ -89,7 +90,7 @@ const Stage = ({ message, setSessionId, sessionId, setMessage }) => {
           </button>
         </div>
         <p className="lead mb-0">
-          You tried {onlyLetters(historic).length} times
+          Tried {onlyLetters(historic).length} of {8 - onlyLetters(historic).length} letters
         </p>
         <p className="lead text-muted">({historic}...)</p>
       </form>

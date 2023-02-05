@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
 const EndMessage = ({ message }) => {
-  const [isLoading, setIsLoading] = useState(false);
-
   const handleClick = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      window.location.reload();
-    }, 5000);
+    window.location.reload();
   };
 
   return (
     <div>
       <h1 className="mb-5">{message}</h1>
-      <button className="p-4 btn btn-lg btn-light fw-bold border-white bg-white" onClick={handleClick} disabled={isLoading}>
+      <button
+        className="p-4 btn btn-lg btn-light fw-bold border-white bg-white"
+        onClick={handleClick}
+      >
         New game
       </button>
     </div>
